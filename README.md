@@ -1,0 +1,49 @@
+# 2DCarrom
+
+Made a 2D carrom game in C++ using OpenGL2
+
+How to compile?
+----------------
+1. Use Makefile. Enter make command.
+2. Execute carrom executable './carrom'
+
+
+## Game Rules
+
+### The Carrom Board
+* The square carrom board has four baselines to place the striker on initially before your turn.
+* The game has been implemented for two players, using the top and bottom baselines for play.
+* The board has four pockets on all its corners.
+* Initially all the coins are neatly arranged in the center of the board.
+
+### Coins
+* There are 3 coins of each color - white and black.
+* There is a red coin.
+* A striker to hit other coins with.
+
+### Scoring
+* Each player has a different colour associated.
+* The bottom player (Player 1) has been assigned white, and Player 2 has been assigned black.
+* If the player pockets a coin of the assigned color, his score increases by 10 points.
+* If the player pockets a coin of the other color, his score decreases by 5 points.
+* If the player pockets the red coin (also called the queen), his score increases by 50 points.
+* In case the player pockets the striker, his score is decreased by 10 points.
+* The players also loses a point, each second he spends in the time from when the striker is set on his baseline to the time he initiates his strike.
+* The scores are initialized at 30 points and are displayed on the left side of the board on the screen.
+* The player with the maximum score when the game is over wins.
+* The game ends when all coins of any of the color have been pocketed, along with the queen.
+
+### Display
+* The carrom board is placed at the center of the screen.
+* There is a power meter/gradient at the right side of the board.
+* The scores are displayed on the left side.
+* The coins each player pockets are also displayed with his score.
+
+### How to play?
+* Player 1 begins the game. The striker is ready on the bottom baseline, and the score already starts decreasing with each passing second.
+* The player can move the striker on the baseline by using the left and right arrow keys. The striker would not cross the boundary of the baseline. It can also be moved by clicking and dragging the striker using the right mouse button.
+* Once the position of the striker is set, the player can adjust the speed of his strike using the up and down arrow keys. The speed can be noted from the power/velocity gradient on the right.
+* The player can adjust the angle of his strike using the 'a' and 'c' keys. 'a' for anti-clockwise rotation, and 'c' for clockwise rotation. The angle can be noted by a red line emerging from the center of the striker. It is initialized at 90 degrees.
+* The strike can be made by pressing the spacebar key.
+* The player can also use the left mouse click, the click will determine the angle and speed of the strike, and once the button is released, the strike will be initiated.
+* Once all the coins have stopped moving, the striker is set on the other baseline, for other player's turn.
